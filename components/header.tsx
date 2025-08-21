@@ -7,12 +7,12 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-2">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo%20ALBB-vfqWu4ZJudQqo5HWZa4CLo9BUR7zZW.png"
-            alt="ALB Sistemas"
-            width={120}
-            height={40}
-            className="h-10 w-auto"
-          />
+  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo%20ALBB-vfqWu4ZJudQqo5HWZa4CLo9BUR7zZW.png"
+  alt="ALB Sistemas"
+  width={240}
+  height={80}
+  className="h-20 w-auto"
+/>
         </div>
 
         <nav className="hidden md:flex items-center space-x-6">
