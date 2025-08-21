@@ -1,97 +1,117 @@
 ---
 layout: default
-title: "Início"
-description: "ALB Sistemas - Soluções em sistemas empresariais com suporte especializado"
+title: "Sistemas Empresariais"
+description: "Soluções completas em sistemas para sua empresa"
 ---
 
 <!-- Hero Section -->
 <section class="hero">
     <div class="container">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Sistemas Empresariais que <span class="highlight">Transformam</span> seu Negócio</h1>
-                <p>Soluções completas em software empresarial com suporte especializado e implementação personalizada para sua empresa crescer.</p>
-                <div class="hero-actions">
-                    <a href="#sistemas" class="btn btn-primary">Ver Sistemas</a>
-                    <a href="/contato/" class="btn btn-secondary">Falar com Especialista</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="/assets/images/hero-dashboard.jpg" alt="Dashboard de sistemas empresariais">
-            </div>
-        </div>
+        <h1>Soluções em Sistemas para sua Empresa</h1>
+        <p>Oferecemos os melhores sistemas empresariais com suporte completo e preços competitivos</p>
+        <a href="#sistemas" class="cta-button">Ver Sistemas</a>
     </div>
 </section>
 
-<!-- Features Section -->
-<section class="features">
+<!-- Sistemas Section -->
+<section class="sistemas-section" id="sistemas">
     <div class="container">
-        <h2>Por que escolher a ALB Sistemas?</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">🚀</div>
-                <h3>Implementação Rápida</h3>
-                <p>Sistemas prontos para uso com implementação em até 48 horas</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🛠️</div>
-                <h3>Suporte Especializado</h3>
-                <p>Equipe técnica dedicada com suporte 24/7 para sua empresa</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">💰</div>
-                <h3>Preços Competitivos</h3>
-                <p>Soluções com o melhor custo-benefício do mercado</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🔧</div>
-                <h3>Personalização</h3>
-                <p>Sistemas adaptados às necessidades específicas do seu negócio</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Systems Section -->
-<section id="sistemas" class="systems">
-    <div class="container">
-        <h2>Nossos Sistemas</h2>
-        <p class="section-subtitle">Soluções completas para todos os setores da sua empresa</p>
+        <h2 class="section-title">Nossos Sistemas</h2>
         
-        <div class="systems-grid">
-            {% for sistema in site.data.sistemas %}
-            <div class="system-card" data-category="{{ sistema.categoria }}">
-                <div class="system-image">
-                    <img src="{{ sistema.imagem }}" alt="{{ sistema.nome }}">
-                </div>
-                <div class="system-content">
-                    <h3>{{ sistema.nome }}</h3>
-                    <p>{{ sistema.descricao }}</p>
-                    <ul class="system-features">
-                        {% for recurso in sistema.recursos limit:3 %}
-                        <li>✓ {{ recurso }}</li>
-                        {% endfor %}
-                    </ul>
-                    <div class="system-footer">
-                        <div class="system-price">{{ sistema.preco }}</div>
-                        <button class="btn btn-primary" onclick="addToCart('{{ sistema.id }}')">
-                            Contratar
-                        </button>
-                    </div>
-                </div>
+        <div class="sistemas-grid">
+            <div class="sistema-card">
+                <div class="sistema-icon">💼</div>
+                <h3>Sistema ERP Completo</h3>
+                <p>Gestão integrada de todos os processos da sua empresa</p>
+                <div class="sistema-price">A partir de R$ 299,00/mês</div>
+                <button class="add-to-cart" onclick="addToCart('erp', 'Sistema ERP Completo', 299.00)">
+                    Solicitar Orçamento
+                </button>
             </div>
-            {% endfor %}
+            
+            <div class="sistema-card">
+                <div class="sistema-icon">🛒</div>
+                <h3>Sistema PDV/POS</h3>
+                <p>Ponto de venda moderno com controle fiscal completo</p>
+                <div class="sistema-price">A partir de R$ 149,00/mês</div>
+                <button class="add-to-cart" onclick="addToCart('pdv', 'Sistema PDV/POS', 149.00)">
+                    Solicitar Orçamento
+                </button>
+            </div>
+            
+            <div class="sistema-card">
+                <div class="sistema-icon">📦</div>
+                <h3>Gestão de Estoque</h3>
+                <p>Controle total do seu estoque com relatórios avançados</p>
+                <div class="sistema-price">A partir de R$ 99,00/mês</div>
+                <button class="add-to-cart" onclick="addToCart('estoque', 'Gestão de Estoque', 99.00)">
+                    Solicitar Orçamento
+                </button>
+            </div>
+            
+            <div class="sistema-card">
+                <div class="sistema-icon">👥</div>
+                <h3>Sistema de RH</h3>
+                <p>Gestão completa de recursos humanos e folha de pagamento</p>
+                <div class="sistema-price">A partir de R$ 199,00/mês</div>
+                <button class="add-to-cart" onclick="addToCart('rh', 'Sistema de RH', 199.00)">
+                    Solicitar Orçamento
+                </button>
+            </div>
+            
+            <div class="sistema-card">
+                <div class="sistema-icon">📊</div>
+                <h3>CRM Empresarial</h3>
+                <p>Gestão de relacionamento com clientes e vendas</p>
+                <div class="sistema-price">A partir de R$ 179,00/mês</div>
+                <button class="add-to-cart" onclick="addToCart('crm', 'CRM Empresarial', 179.00)">
+                    Solicitar Orçamento
+                </button>
+            </div>
+            
+            <div class="sistema-card">
+                <div class="sistema-icon">📋</div>
+                <h3>Sistema Contábil</h3>
+                <p>Controle financeiro e contábil completo</p>
+                <div class="sistema-price">A partir de R$ 249,00/mês</div>
+                <button class="add-to-cart" onclick="addToCart('contabil', 'Sistema Contábil', 249.00)">
+                    Solicitar Orçamento
+                </button>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- CTA Section -->
-<section class="cta">
+<!-- Contact Section -->
+<section class="contact-section">
     <div class="container">
-        <div class="cta-content">
-            <h2>Pronto para Transformar sua Empresa?</h2>
-            <p>Entre em contato conosco e descubra como nossos sistemas podem otimizar seus processos</p>
-            <a href="/contato/" class="btn btn-primary btn-large">Solicitar Demonstração</a>
+        <h2 class="section-title">Entre em Contato</h2>
+        <div class="contact-info-grid">
+            <div class="contact-item">
+                <h3>WhatsApp</h3>
+                <p>(11) 94712-1877</p>
+            </div>
+            <div class="contact-item">
+                <h3>E-mail</h3>
+                <p>contato@albsistemas.com.br</p>
+            </div>
+            <div class="contact-item">
+                <h3>Horário</h3>
+                <p>Seg-Sex: 8h às 18h</p>
+            </div>
         </div>
     </div>
 </section>
+
+<!-- Cart Sidebar -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-sidebar" id="cartSidebar">
+    <h3>Seu Carrinho</h3>
+    <div id="cartItems"></div>
+    <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+        <p><strong>Total: <span id="cartTotal">R$ 0,00</span></strong></p>
+        <button onclick="sendWhatsApp()" style="width: 100%; margin-top: 1rem; background: #25d366; color: white; border: none; padding: 1rem; border-radius: 0.5rem; font-weight: 600; cursor: pointer;">
+            Enviar pelo WhatsApp
+        </button>
+    </div>
+</div>

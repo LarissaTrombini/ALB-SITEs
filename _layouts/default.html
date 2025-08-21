@@ -6,16 +6,11 @@
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
     
-    <!-- Fonts -->
+    <!-- Caminhos corrigidos para GitHub Pages -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    
-    <!-- SEO -->
-    {% seo %}
 </head>
 <body>
     {% include header.html %}
@@ -26,7 +21,7 @@
     
     {% include footer.html %}
     
-    <!-- Scripts -->
+    <!-- Script com caminho corrigido -->
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>

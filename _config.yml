@@ -1,37 +1,27 @@
-# Site settings
+# Configuração do site Jekyll para GitHub Pages
 title: "ALB Sistemas"
-description: "Soluções em sistemas empresariais - ERP, PDV, Gestão e muito mais"
-baseurl: ""
-url: "https://seu-usuario.github.io"
+description: "Soluções em Sistemas para sua Empresa"
+baseurl: "/ALB-SITEs" # Nome do repositório GitHub
+url: "https://larissatrombini.github.io" # URL base do GitHub Pages
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-seo-tag
-
-# Collections
-collections:
-  sistemas:
-    output: true
-    permalink: /:collection/:name/
 
 # Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor
-  - .sass-cache
-  - .jekyll-cache
-  - gemfiles
-  - README.md
-
-# Site data
-company:
-  name: "ALB Sistemas"
-  phone: "(11) 94712-1877"
-  email: "contato@albsistemas.com.br"
-  address: "São Paulo, SP"
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
