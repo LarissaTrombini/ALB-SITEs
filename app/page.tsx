@@ -11,7 +11,7 @@ export default function HomePage() {
       <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center leading-9 space-x-9 font-medium">
               <Image src="/logo-alb.png" alt="ALB Sistemas" width={120} height={40} className="h-10 w-auto" />
             </div>
             <nav className="hidden md:flex items-center space-x-6">

@@ -1,0 +1,97 @@
+---
+layout: default
+title: "Início"
+description: "ALB Sistemas - Soluções em sistemas empresariais com suporte especializado"
+---
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Sistemas Empresariais que <span class="highlight">Transformam</span> seu Negócio</h1>
+                <p>Soluções completas em software empresarial com suporte especializado e implementação personalizada para sua empresa crescer.</p>
+                <div class="hero-actions">
+                    <a href="#sistemas" class="btn btn-primary">Ver Sistemas</a>
+                    <a href="/contato/" class="btn btn-secondary">Falar com Especialista</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/assets/images/hero-dashboard.jpg" alt="Dashboard de sistemas empresariais">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="container">
+        <h2>Por que escolher a ALB Sistemas?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>Implementação Rápida</h3>
+                <p>Sistemas prontos para uso com implementação em até 48 horas</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛠️</div>
+                <h3>Suporte Especializado</h3>
+                <p>Equipe técnica dedicada com suporte 24/7 para sua empresa</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Preços Competitivos</h3>
+                <p>Soluções com o melhor custo-benefício do mercado</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3>Personalização</h3>
+                <p>Sistemas adaptados às necessidades específicas do seu negócio</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Systems Section -->
+<section id="sistemas" class="systems">
+    <div class="container">
+        <h2>Nossos Sistemas</h2>
+        <p class="section-subtitle">Soluções completas para todos os setores da sua empresa</p>
+        
+        <div class="systems-grid">
+            {% for sistema in site.data.sistemas %}
+            <div class="system-card" data-category="{{ sistema.categoria }}">
+                <div class="system-image">
+                    <img src="{{ sistema.imagem }}" alt="{{ sistema.nome }}">
+                </div>
+                <div class="system-content">
+                    <h3>{{ sistema.nome }}</h3>
+                    <p>{{ sistema.descricao }}</p>
+                    <ul class="system-features">
+                        {% for recurso in sistema.recursos limit:3 %}
+                        <li>✓ {{ recurso }}</li>
+                        {% endfor %}
+                    </ul>
+                    <div class="system-footer">
+                        <div class="system-price">{{ sistema.preco }}</div>
+                        <button class="btn btn-primary" onclick="addToCart('{{ sistema.id }}')">
+                            Contratar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Pronto para Transformar sua Empresa?</h2>
+            <p>Entre em contato conosco e descubra como nossos sistemas podem otimizar seus processos</p>
+            <a href="/contato/" class="btn btn-primary btn-large">Solicitar Demonstração</a>
+        </div>
+    </div>
+</section>

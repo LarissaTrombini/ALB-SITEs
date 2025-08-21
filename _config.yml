@@ -1,0 +1,37 @@
+# Site settings
+title: "ALB Sistemas"
+description: "Soluções em sistemas empresariais - ERP, PDV, Gestão e muito mais"
+baseurl: ""
+url: "https://seu-usuario.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  sistemas:
+    output: true
+    permalink: /:collection/:name/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - README.md
+
+# Site data
+company:
+  name: "ALB Sistemas"
+  phone: "(11) 94712-1877"
+  email: "contato@albsistemas.com.br"
+  address: "São Paulo, SP"

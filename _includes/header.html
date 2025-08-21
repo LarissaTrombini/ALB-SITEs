@@ -1,0 +1,47 @@
+<header class="header">
+    <div class="container">
+        <!-- Top bar -->
+        <div class="header-top">
+            <div class="contact-info">
+                <span>📞 {{ site.company.phone }}</span>
+                <span>✉️ {{ site.company.email }}</span>
+            </div>
+            <div class="promo-text">
+                🚀 Sistemas empresariais com suporte especializado
+            </div>
+        </div>
+        
+        <!-- Main header -->
+        <div class="header-main">
+            <div class="logo">
+                <a href="{{ '/' | relative_url }}">
+                    <img src="{{ '/assets/images/logo-alb.png' | relative_url }}" alt="ALB Sistemas" class="logo-img">
+                </a>
+            </div>
+            
+            <nav class="nav-desktop">
+                <a href="{{ '/' | relative_url }}">Início</a>
+                <a href="{{ '/sistemas/' | relative_url }}">Sistemas</a>
+                <a href="{{ '/sobre/' | relative_url }}">Sobre</a>
+                <a href="{{ '/contato/' | relative_url }}">Contato</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Carrinho (<span id="cart-count">0</span>)
+                </button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    ☰
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <nav class="nav-mobile" id="mobile-menu">
+            <a href="{{ '/' | relative_url }}">Início</a>
+            <a href="{{ '/sistemas/' | relative_url }}">Sistemas</a>
+            <a href="{{ '/sobre/' | relative_url }}">Sobre</a>
+            <a href="{{ '/contato/' | relative_url }}">Contato</a>
+        </nav>
+    </div>
+</header>
